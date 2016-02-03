@@ -1,0 +1,7 @@
+﻿
+Описание.Имя("oscript-app-template")
+		.Версия("0.1.1")
+		.ЗависитОт("logos")
+		.ЗависитОт("cmdline")
+		.ВключитьФайл("src")
+		.ИсполняемыйФайл("src/console-entry-point.os");
