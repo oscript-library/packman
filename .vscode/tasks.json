@@ -60,7 +60,7 @@
     {
       "taskName": "OneScript: test",
       "args": [
-        "c:/Users/aovsyankin/Documents/GITs/oscript-library/src/1testrunner/testrunner.os",
+        "F:/GITS/1Script/oscript-library_supply/src/1testrunner/testrunner.os",
         "-run",
         "${file}"
       ],
