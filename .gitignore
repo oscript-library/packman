@@ -1,3 +1,4 @@
 tests.xml
 *.ospx
 oscript_modules/
+src/oscript.cfg
