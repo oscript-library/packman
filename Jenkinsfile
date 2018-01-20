@@ -15,6 +15,8 @@ pipeline {
                 checkout scm
 				
                 script {
+					bat 'chcp 65001 > nul && opm install -l'
+
 					if( fileExists ('tasks/test.os') ){
 						bat 'chcp 65001 > nul && oscript tasks/test.os'
 						junit 'junit-*.xml'
