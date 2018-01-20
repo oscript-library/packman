@@ -1,4 +1,3 @@
-
 pipeline {
     agent none
     options {
@@ -19,8 +18,13 @@ pipeline {
 					bat 'chcp 65001 > nul && opm install tool1cd'
 
 					if( fileExists ('tasks/test.os') ){
-						bat 'chcp 65001 > nul && oscript tasks/test.os'
-                        junit 'tests.xml'
+                        try {
+                            cmd("oscript tasks/test.os")
+                            junit 'tests.xml'
+                        } catch (Exception err) {
+                            junit 'tests.xml'
+                            throw err;
+                        }
 					}
 					else
 						echo 'no testing task'
@@ -91,5 +95,13 @@ pipeline {
                 '''.stripIndent()
 			}
 		}
+    }
+}
+
+def cmd(command) {
+    if (isUnix()) {
+        sh "${command}"
+    } else {
+         bat "chcp 65001\n${command}"
     }
 }
