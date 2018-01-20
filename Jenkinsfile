@@ -15,7 +15,6 @@ pipeline {
 				
                 script {
 					bat 'chcp 65001 > nul && opm install -l'
-					bat 'chcp 65001 > nul && opm install tool1cd'
 
 					if( fileExists ('tasks/test.os') ){
                         try {
