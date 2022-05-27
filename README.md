@@ -35,3 +35,4 @@
 
 Есть бесплатный вебинар [Открытый инструментарий счастливого 1С-ника](https://youtu.be/RuFXBLzch2o)
 
+Посмотрите пример команд в [examples/pacman_make_CF.bat](./examples/pacman_make_CF.bat)
